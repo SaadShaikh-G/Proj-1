@@ -1,0 +1,679 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    scrollbar-width: none;
+
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0%;
+    padding: 0%;
+    background-color: #0a062b;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ----  header ---- */
+
+header {
+    padding: 10px 20px;
+    background: #000000;
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    z-index: 1111;
+}
+
+.main-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-head h1 {
+    color: #d81313;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    padding: 5px 10px;
+    border: none;
+    display: inline-block;
+    padding: 5px;
+    transition: all linear 0.5s;
+    margin-right: 20px;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    padding: 5px;
+}
+
+nav li a:hover {
+    text-decoration: none;
+    color: goldenrod;
+    font-size: 1.05rem;
+    padding: 5px;
+    transition: 0.3s;
+}
+
+/* ----  header end ---- */
+.first-image img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    color: transparent;
+    object-fit: cover;
+    filter: blur(3px);
+
+}
+
+.first-section {
+    position: relative;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+
+
+}
+
+.first-section h1 {
+    position: relative;
+    top: 200px;
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    font-weight: 700;
+    text-shadow: 10px 1px 20px rgb(109, 110, 21);
+
+
+}
+
+.first-section p {
+    position: relative;
+    top: 250px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
+
+/* ---- first-section end---- */
+
+.second-section h1 {
+    position: relative;
+    top: 60px;
+    height: 80vh;
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    font-weight: 600;
+    text-shadow: 10px 1px 20px rgb(73, 64, 64);
+}
+
+.second-section hr {
+    position: relative;
+    top: -420px;
+    left: 60px;
+    border: 0;
+    height: 1px;
+    width: 1420px;
+    background: rgb(78, 77, 77);
+}
+
+.second-section .container {
+    position: relative;
+    left: -500px;
+    top: -400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.second-section .container .card {
+    color: #fff;
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 50px;
+    display: flex;
+    transition: 0.5s;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    background: linear-gradient(45deg, #202020a2, #202020a2);
+}
+
+
+.second-section .container .card .content {
+    position: relative;
+    width: 300px;
+    left: 20%;
+    padding: 20px 20px 20px 20px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.1s;
+}
+
+.second-section .container .card:hover .content {
+    left: 10%;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.second-section .container .card .content a {
+    position: relative;
+    color: #fff;
+    background: #111;
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.second-section .visiblecontent h1 {
+    position: absolute;
+    width: 40%;
+    top: 140px;
+    left: 15%;
+    padding: 20px 20px 20px 20px;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.2s;
+    text-transform: uppercase;
+    justify-content: center;
+    text-align: center;
+    color: goldenrod;
+    font-size: 60px;
+    text-shadow: none;
+}
+
+.second-section .card:hover .visiblecontent h1 {
+    position: absolute;
+    width: 40%;
+    left: 10%;
+    left: 10%;
+    padding: 20px 20px 20px 20px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.2s;
+    text-transform: uppercase;
+    color: goldenrod;
+    font-size: 60px;
+}
+.second-section .visiblecontent img {
+    height: 150px;
+    position: absolute; 
+    top: 5%;
+    right: 70px;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.3s;
+    text-transform: uppercase;
+    text-shadow: none;
+}
+
+.second-section .card:hover .visiblecontent img {
+    height: 150px;
+    position: absolute;
+    top: 5%; 
+    right: 70px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.2s;
+    text-transform: uppercase;
+    color: goldenrod;
+    font-size: 60px;
+}
+
+/* first-service end */
+.second-section .container-2 {
+    position: absolute;
+    left: 520px;
+    top: 852px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.second-section .container-2 .card-2 {
+    color: #fff;
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 50px;
+    display: flex;
+    transition: 0.5s;
+    align-items: center;
+    cursor: pointer;
+    background: linear-gradient(45deg, #202020a2, #202020a2);
+}
+
+
+.second-section .container-2 .card-2 .content-2 {
+    position: relative;
+    width: 300px;
+    left: 20%;
+    padding: 20px 20px 20px 20px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.second-section .container-2 .card-2:hover .content-2 {
+    left: 10%;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.second-section .container-2 .card-2 .content-2 a {
+    position: relative;
+    color: #fff;
+    background: #111;
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.second-section .visiblecontent-2 h1 {
+    position: absolute;
+    width: 40%;
+    top: 5%;
+    left: 5%;
+    padding: 20px 20px 20px 20px;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.3s;
+    text-transform: uppercase;
+    color: goldenrod;
+    font-size: 60px;
+    text-shadow: none;
+}
+
+.second-section .card-2:hover .visiblecontent-2 h1 {
+    position: absolute;
+    width: 40%;
+    left: 10%;
+    left: 10%;
+    padding: 20px 20px 20px 20px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.2s;
+    text-transform: uppercase;
+    color: goldenrod;
+    font-size: 60px;
+}
+/* second-service end */
+
+.second-section .container-3 {
+    position: absolute;
+    left: 1020px;
+    top: 852px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.second-section .container-3 .card-3 {
+    color: #fff;
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 50px;
+    display: flex;
+    transition: 0.5s;
+    align-items: center;
+    cursor: pointer;
+    background: linear-gradient(45deg, #202020a2, #202020a2);
+}
+
+
+.second-section .container-3 .card-3 .content-3 {
+    position: relative;
+    width: 300px;
+    left: 20%;
+    padding: 20px 20px 20px 20px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.second-section .container-3 .card-3:hover .content-3 {
+    left: 10%;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.second-section .container-3 .card-3 .content-3 a {
+    position: relative;
+    color: #fff;
+    background: #111;
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.second-section .visiblecontent-3 h1 {
+    position: absolute;
+    width: 40%;
+    top: 5%;
+    left: 5%;
+    padding: 20px 20px 20px 20px;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.3s;
+    text-transform: uppercase;
+    color: goldenrod;
+    font-size: 60px;
+    text-shadow: none;
+}
+
+.second-section .card-3:hover .visiblecontent-3 h1 {
+    position: absolute;
+    width: 40%;
+    left: 10%;
+    left: 10%;
+    padding: 20px 20px 20px 20px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.2s;
+    text-transform: uppercase;
+    color: goldenrod;
+    font-size: 60px;
+}
+
+/* ----  BUTTON CSS START ---- */
+.button-container {
+    position: relative;
+    top: 330px;
+
+}
+
+.harsh-btn-1 {
+    border-radius: 50px;
+    background-color: #22186f;
+    border: none;
+    color: #ffffff;
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.harsh-btn-1 span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.harsh-btn-1 span:after {
+    content: "\00bb";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.harsh-btn-1:hover span {
+    padding-right: 25px;
+}
+
+.harsh-btn-1:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+
+/* ----  BUTTON CSS END ---- */
+
+
+
+
+
+.third-section .container {
+    position: relative;
+    top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.third-section .container .card {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    margin: 50px;
+    display: flex;
+    transition: 0.5s;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    background: linear-gradient(45deg, #202020a2, #202020a2);
+}
+
+.third-section .container .card img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 400px;
+    transition: 0.5s;
+}
+
+.third-section .container .card:hover img {
+    left: 90%;
+    height: 450px;
+}
+
+.third-section .container .card .content {
+    position: relative;
+    width: 40%;
+    left: 20%;
+    padding: 20px 20px 20px 20px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.third-section .container .card:hover .content {
+    left: 10%;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.third-section .container .card .content a {
+    position: relative;
+    color: #fff;
+    background: #111;
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+/* creator saad shaikh */
+.third-section .visiblecontent h1 {
+    position: absolute;
+    width: 40%;
+    top: 5%;
+    left: 5%;
+    padding: 20px 20px 20px 20px;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.3s;
+    text-transform: uppercase;
+    color: goldenrod;
+    font-size: 75px;
+}
+
+.third-section .visiblecontentleft h1 {
+    position: absolute;
+    width: 40%;
+    top: 40%;
+    left: 5%;
+    padding: 20px 20px 20px 20px;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.3s;
+    text-transform: uppercase;
+    color: black;
+    font-size: 20px;
+}
+
+.third-section .visiblecontentright h1 {
+    position: absolute;
+    width: 40%;
+    top: 40%;
+    left: 65%;
+    padding: 20px 20px 20px 20px;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.3s;
+    text-transform: uppercase;
+    color: goldenrod;
+    font-size: 20px;
+}
+
+.third-section .card:hover .visiblecontent h1 {
+    position: absolute;
+    width: 40%;
+    left: 10%;
+    left: 10%;
+    padding: 20px 20px 20px 20px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.2s;
+    text-transform: uppercase;
+    color: goldenrod;
+    font-size: 75px;
+}
+
+.third-section .card:hover .visiblecontentleft h1 {
+    position: absolute;
+    width: 40%;
+    left: 10%;
+    left: 10%;
+    padding: 20px 20px 20px 20px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.2s;
+    text-transform: uppercase;
+    color: goldenrod;
+    font-size: 20px;
+}
+
+.third-section .card:hover .visiblecontentright h1 {
+    position: absolute;
+    width: 40%;
+    left: 10%;
+    left: 10%;
+    padding: 20px 20px 20px 20px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.2s;
+    text-transform: uppercase;
+    color: goldenrod;
+    font-size: 20px;
+}
+
+footer {
+    background-color: black;
+
+}
+
+.footer {
+    display: flex;
+    padding: 23px 113px;
+    color: #fff;
+    justify-content: space-evenly;
+}
+
+.footer ul {
+    list-style: none;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.footer>div {
+    width: 123px;
+}
+
+footer .text-center {
+    color: grey;
+    text-align: center;
+}
+
+/* effect      */
+
+#background {
+    padding: 20px;
+    transition: filter 0.3s ease;
+  }
+
+  .blur {
+    filter: blur(5px);
+  }
+
+  #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #overlay.active {
+    display: flex;
+  }
+
+  .modal {
+    position: fixed;
+    left: 500px;
+    right: 500px;
+    background: goldenrod;
+    padding: 50px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  .modal button{
+    background: #111;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 30px;
+    color: goldenrod;
+    border-radius: 0.5rem;
+  }
+  
