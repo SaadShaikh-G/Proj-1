@@ -13,6 +13,11 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
 
     <style>
+        @font-face {
+            font-family: 'Bigmarker';
+            src: url('the_bigmaker/The Bigmaker PersonalUseOnly.ttf') format('truetype');
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -22,7 +27,7 @@
         }
 
         section {
-            scroll-margin-top: 80px;
+            scroll-margin-top: 70px;
             /* Ensures full section visibility below fixed header */
         }
 
@@ -39,19 +44,73 @@
 
         header {
             background: #11122b;
-            padding: 10px 25px;
+            padding: 10px 40px;
             position: fixed;
             top: 0;
             width: 100%;
+            height: 70px;
             z-index: 1000;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
+        header .half-circle-left-border {
+            position: absolute;
+
+            top: 6px;
+            left: 85px;
+            width: 60px;
+            height: 60px;
+            border: 2px solid #ffcc00;
+            /* border-left: none; */
+            border-top-right-radius: 100px;
+            border-bottom-right-radius: 100px;
+            border-top-left-radius: 100px;
+            border-bottom-left-radius: 100px;
+            background: transparent;
+        }
+
+        header .half-circle-left-border::after {
+            content: "";
+            position: absolute;
+            top: 10px;
+            left: -31px;
+            width: 50px;
+            height: 46px;
+            background: #11122b;
+            border-top-right-radius: 161px;
+            border-bottom-right-radius: 161px;
+            border-top-left-radius: 161px;
+            border-bottom-left-radius: 161px;
+        }
+
         header h1 {
+            position: relative;
+            left: -18px;
+            top: 2px;
+            font-family: 'Bigmarker', sans-serif;
+            font-size: 49PX;
+            font-weight: lighter;
+
+
+        }
+
+        header p {
+            position: relative;
+            left: -540px;
+            top: 18px;
+            font-size: 7PX;
             color: #ffcc00;
-            
+
+        }
+
+        header span {
+            left: 1px;
+            top: 0px;
+            font-size: 7PX;
+            font-weight: lighter;
+            color: white;
         }
 
         nav ul {
@@ -90,6 +149,7 @@
         .first-section h1 {
             font-size: 3rem;
             color: white;
+
         }
 
         .first-section p {
@@ -253,43 +313,139 @@
             color: #ccc;
         }
 
+        #about {
+            height: 659px;
+        }
+
         .about-section {
+
             padding: 60px 20px;
             background-color: #11122b;
             color: white;
         }
 
-        .about-section h1 {
-            text-align: center;
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            color: goldenrod;
-        }
-
-        .about-section hr {
-            width: 60%;
-            margin: 0 auto 40px auto;
-            border: 1px solid #333;
-        }
-
-        .about-content {
+        .container {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            justify-content: space-between;
+            padding: 50px;
             align-items: center;
+        }
+
+        .left {
+            position: relative;
+            top: -275px;
+            flex: 1;
+        }
+
+        .intro {
+            font-size: 24px;
+            color: #b0aebe;
+        }
+
+        .name {
+            font-size: 48px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .description {
+            color: #b0aebe;
+            max-width: 400px;
+        }
+
+        .right {
+            flex: 1;
+            position: relative;
+            text-align: center;
+        }
+
+        .right .half-circle-left-border::after {
+            content: "";
+            position: absolute;
+            top: -93px;
+            left: -288px;
+            width: 500px;
+            height: 500px;
+            background: #292c4b;
+            border-top-right-radius: 250px;
+            border-bottom-right-radius: 250px;
+            border-top-left-radius: 250px;
+            border-bottom-left-radius: 250px;
+        }
+        .shadow-img {
+  width: 300px;
+  filter: drop-shadow(0 -9px 12px rgba(0, 0, 0, 0.4));
+}
+
+        .right img {
+            position: relative;
+            left: -392px;
+            top: -115px;
+            width: 300px;
+            border-radius: 15px;
+        }
+
+        .services {
+            position: relative;
+            left: 50px;
+            top: -522px;
+            margin-top: 20px;
+        }
+
+        .services h3 {
+            color: #ffcf57;
+            margin-bottom: 10px;
+        }
+
+        .services p {
+            font-size: 16px;
+            color: #ddd;
+            max-width: 300px;
+            margin: 10px auto;
+        }
+
+        .show-more {
+            display: inline-block;
+            margin-top: 10px;
+            color: #ffcf57;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .social-icons {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-icons i {
+            font-size: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .social-icons i:hover {
+            color: #ffcf57;
+        }
+
+        .partners {
+            position: relative;
+            top: -441px;
+            display: flex;
+            justify-content: center;
             gap: 40px;
+            background: #3c3a4a;
+            padding: 20px 0;
+            margin-top: 40px;
         }
 
-        .about-text {
-            max-width: 600px;
+        .brand {
             font-size: 18px;
-            line-height: 1.6;
-        }
-
-        .about-image img {
-            max-width: 200px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+            color: #ccc;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .download-btn {
@@ -337,7 +493,10 @@
 
 <body>
     <header>
-        <h1>Saad Dev</h1>
+
+        <div class="half-circle-left-border"></div>
+        <h1>Saad Shaikh</h1>
+        <p>DEVELOPER <span>& DESIGNER</span> </p>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -405,32 +564,53 @@
 
         <section id="about" class="about-section">
             <div class="container">
-                <h1>About Me</h1>
-                <hr>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>
-                            Hello! I'm <strong>Saad Shaikh</strong>, a passionate front-end and application developer
+                <div class="left">
+                    <p class="intro">I'm</p>
+                    <h1 class="name">Saad Shaikh</h1>
+                    <p class="description">
+                        A freelancer who provides services for digital programming and design content needs, for all
+                        businesses with more than 10 years of experience
+                    </p>
+                </div>
+                <div class="right">
+                    <div class="half-circle-left-border"></div>
+                    <img src="saad prof_LE_upscale_balanced_x4 (1).png" alt="James Adam"  class="shadow-img"/>
+                    <div class="services">
+                        <h3>Services</h3>
+                        <p>Let's build quality products in programming and design with my services</p>
+                        <a href="#" class="show-more">show more <i class="fas fa-arrow-right"></i></a>
+                        <div class="social-icons">
+                            <i class="fab fa-facebook"></i>
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-instagram"></i>
+                            <i class="fab fa-pinterest"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="partners">
+                <div class="brand"><i class="fab fa-meta"></i> Meta</div>
+                <div class="brand"><i class="fab fa-google"></i> Google</div>
+                <div class="brand"><i class="fab fa-linkedin"></i> LinkedIn</div>
+                <div class="brand"><i class="fab fa-slack"></i> Slack</div>
+            </div>
+
+            <!-- <p>a passionate front-end and application developer
                             dedicated to building dynamic, user-friendly digital experiences. I specialize in creating
                             responsive websites using HTML5, CSS3, JavaScript, and frameworks like React or Vue. I also
                             develop Windows-based applications using C#, leveraging SQL Server for backend integration.
                         </p>
-                        <p>
+                        <p1>
                             My focus is on blending design with functionality—ensuring clean UI/UX, fast loading speeds,
                             and robust performance. I'm continuously exploring new technologies and best practices to
                             elevate my skills and deliver professional-grade solutions.
-                        </p>
-                        <p>
+                        </p1>
+                        <p2>
                             In my free time, I enjoy designing logos, exploring UI design trends, and contributing to
                             open-source projects.
-                        </p>
-                        <a class="download-btn" href="Saad_Shaikh_Resume.pdf" download>Download My Resume</a>
-                    </div>
-                    <div class="about-image">
-                        <img src="saad_prof-removebg-preview.png" alt="Saad Shaikh" />
-                    </div>
-                </div>
-            </div>
+                        </p2> -->
+
         </section>
 
         <section id="contact" class="third-section">
