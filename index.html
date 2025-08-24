@@ -1,648 +1,89 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Saad Shaikh | Developer Portfolio</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
-
-    <style>
-        @font-face {
-            font-family: 'Bigmarker';
-            src: url('the_bigmaker/The Bigmaker PersonalUseOnly.ttf') format('truetype');
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
-        }
-
-        section {
-            scroll-margin-top: 70px;
-            /* Ensures full section visibility below fixed header */
-        }
-
-        * {
-            scrollbar-width: none;
-
-        }
-
-        body {
-            background-color: #0b0c2a;
-            color: #ffffff;
-            line-height: 1.6;
-        }
-
-        header {
-            background: #11122b;
-            padding: 10px 40px;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            height: 70px;
-            z-index: 1000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        header .half-circle-left-border {
-            position: absolute;
-
-            top: 6px;
-            left: 85px;
-            width: 60px;
-            height: 60px;
-            border: 2px solid #ffcc00;
-            /* border-left: none; */
-            border-top-right-radius: 100px;
-            border-bottom-right-radius: 100px;
-            border-top-left-radius: 100px;
-            border-bottom-left-radius: 100px;
-            background: transparent;
-        }
-
-        header .half-circle-left-border::after {
-            content: "";
-            position: absolute;
-            top: 10px;
-            left: -31px;
-            width: 50px;
-            height: 46px;
-            background: #11122b;
-            border-top-right-radius: 161px;
-            border-bottom-right-radius: 161px;
-            border-top-left-radius: 161px;
-            border-bottom-left-radius: 161px;
-        }
-
-        header h1 {
-            position: relative;
-            left: -18px;
-            top: 2px;
-            font-family: 'Bigmarker', sans-serif;
-            font-size: 49PX;
-            font-weight: lighter;
-
-
-        }
-
-        header p {
-            position: relative;
-            left: -540px;
-            top: 18px;
-            font-size: 7PX;
-            color: #ffcc00;
-
-        }
-
-        header span {
-            left: 1px;
-            top: 0px;
-            font-size: 7PX;
-            font-weight: lighter;
-            color: white;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 25px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: #ffcc00;
-        }
-
-        main {
-            padding-top: 0px;
-        }
-
-        .first-section {
-            background-image: url('pexels-ekrulila-2255355.jpg');
-            background-size: cover;
-            background-position: center;
-            min-height: 100vh;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            /* padding: 60px; */
-        }
-
-        .first-section h1 {
-            font-size: 3rem;
-            color: white;
-
-        }
-
-        .first-section p {
-            font-size: 1.1rem;
-            max-width: 800px;
-            margin: 20px auto;
-            padding-bottom: 30px;
-        }
-
-        .harsh-btn-1 {
-            background-color: #ffcc00;
-            color: #111;
-            border: none;
-            padding: 15px 25px 15px 40px;
-            border-radius: 25px;
-            cursor: pointer;
-            font-weight: bold;
-            margin-top: 20px;
-            width: fit-content;
-            min-width: unset;
-            font-size: 18px;
-            transition: all 0.3s ease;
-            box-shadow: 0 0 0 transparent;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .harsh-btn-1:hover {
-            box-shadow: 0 0 12px #686350;
-            background-color: #ffcc00;
-        }
-
-        .harsh-btn-1::after {
-            content: '...';
-            opacity: 0;
-            transition: opacity 0.3s ease, transform 0.3s ease;
-            display: inline-block;
-            transform: translateX(-5px);
-        }
-
-        .harsh-btn-1:hover::after {
-            opacity: 1;
-            transform: translateX(5px);
-        }
-
-        section {
-            padding: 100px 60px;
-        }
-
-        .second-section {
-            background-color: #1c1e3b;
-        }
-
-        .second-section h1 {
-            text-align: center;
-            margin-bottom: 40px;
-            color: #ffcc00;
-        }
-
-        .services-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 40px;
-        }
-
-        .card {
-            background: #292c4b;
-            border-radius: 12px;
-            padding: 30px;
-            width: 300px;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-        }
-
-        .card img {
-            height: 100px;
-            margin-bottom: 20px;
-        }
-
-        .card h2 {
-            color: #ffcc00;
-            margin-bottom: 15px;
-        }
-
-        .card p {
-            font-size: 0.95rem;
-            color: #ccc;
-        }
-
-        .card a {
-            display: inline-block;
-            margin-top: 15px;
-            color: #ffcc00;
-            text-decoration: none;
-        }
-
-        .work-section {
-            background-color: #11122b;
-            color: white;
-        }
-
-        .work-section h1 {
-            text-align: center;
-            font-size: 1.5rem;
-            color: #ffcc00;
-            margin-bottom: 40px;
-        }
-
-        .projects-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 40px;
-        }
-
-        .project-card {
-            background: #22254c;
-            border-radius: 10px;
-            padding: 20px;
-            width: 280px;
-            text-align: center;
-        }
-
-        .project-card h3 {
-            color: #ffcc00;
-            margin-bottom: 10px;
-        }
-
-        .project-card p {
-            color: #ccc;
-            font-size: 0.95rem;
-        }
-
-        .third-section {
-            background-color: #1c1e3b;
-        }
-
-        .third-section h1 {
-            text-align: center;
-            margin-bottom: 40px;
-            color: #ffcc00;
-        }
-
-        .contact-card {
-            max-width: 700px;
-            background: #292c4b;
-            margin: auto;
-            padding: 40px;
-            border-radius: 12px;
-            text-align: center;
-        }
-
-        .contact-card p {
-            margin: 20px 0;
-            color: #ccc;
-        }
-
-        #about {
-            height: 659px;
-        }
-
-        .about-section {
-
-            padding: 60px 20px;
-            background-color: #11122b;
-            color: white;
-        }
-
-        .container {
-            display: flex;
-            justify-content: space-between;
-            padding: 50px;
-            align-items: center;
-        }
-
-        .left {
-            position: relative;
-            top: -275px;
-            flex: 1;
-        }
-
-        .intro {
-            font-size: 24px;
-            color: #b0aebe;
-        }
-
-        .name {
-            font-size: 48px;
-            font-weight: bold;
-            margin: 10px 0;
-        }
-
-        .description {
-            color: #b0aebe;
-            max-width: 400px;
-        }
-
-        .right {
-            flex: 1;
-            position: relative;
-            text-align: center;
-        }
-
-        .right .half-circle-left-border::after {
-            content: "";
-            position: absolute;
-            top: -93px;
-            left: -288px;
-            width: 500px;
-            height: 500px;
-            background: #292c4b;
-            border-top-right-radius: 250px;
-            border-bottom-right-radius: 250px;
-            border-top-left-radius: 250px;
-            border-bottom-left-radius: 250px;
-        }
-        .shadow-img {
-  width: 300px;
-  filter: drop-shadow(0 -9px 12px rgba(0, 0, 0, 0.4));
-}
-
-        .right img {
-            position: relative;
-            left: -392px;
-            top: -115px;
-            width: 300px;
-            border-radius: 15px;
-        }
-
-        .services {
-            position: relative;
-            left: 50px;
-            top: -522px;
-            margin-top: 20px;
-        }
-
-        .services h3 {
-            color: #ffcf57;
-            margin-bottom: 10px;
-        }
-
-        .services p {
-            font-size: 16px;
-            color: #ddd;
-            max-width: 300px;
-            margin: 10px auto;
-        }
-
-        .show-more {
-            display: inline-block;
-            margin-top: 10px;
-            color: #ffcf57;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .social-icons {
-            margin-top: 15px;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .social-icons i {
-            font-size: 20px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .social-icons i:hover {
-            color: #ffcf57;
-        }
-
-        .partners {
-            position: relative;
-            top: -441px;
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            background: #3c3a4a;
-            padding: 20px 0;
-            margin-top: 40px;
-        }
-
-        .brand {
-            font-size: 18px;
-            color: #ccc;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .download-btn {
-            margin-top: 30px;
-            display: inline-block;
-            background-color: #ffcc00;
-            color: #111;
-            font-weight: bold;
-            padding: 12px 25px;
-            border-radius: 25px;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
-
-        .download-btn:hover {
-            background-color: #e6b800;
-        }
-
-        footer {
-            background-color: #11122b;
-            padding: 30px;
-            color: #999;
-            text-align: center;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-bottom: 20px;
-        }
-
-        .footer-links a {
-            color: #ffcc00;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .footer-links a:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Veloura – Home</title>
+  <link rel="stylesheet" href="stylesheet1.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 </head>
-
 <body>
-    <header>
-
-        <div class="half-circle-left-border"></div>
-        <h1>Saad Shaikh</h1>
-        <p>DEVELOPER <span>& DESIGNER</span> </p>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#service">Services</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#login">Login</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="home" class="first-section">
-            <h1>Hi, I’m Saad Shaikh<br><span id="element"></span></h1>
-            <p>I’m a front-end developer crafting responsive, user-focused websites. I build elegant and functional web
-                experiences using HTML, CSS, JavaScript, and frameworks like React or Vue.</p>
-            <button class="harsh-btn-1"><span>Read more</span></button>
-        </section>
-
-        <section id="work" class="work-section">
-            <h1>My Work</h1>
-            <div class="projects-container">
-                <div class="project-card">
-                    <h3>Portfolio Website</h3>
-                    <p>A personal portfolio built with HTML, CSS, and JavaScript showcasing my skills and projects.</p>
-                </div>
-                <div class="project-card">
-                    <h3>Hotel Booking App</h3>
-                    <p>Windows-based application for managing room bookings, developed using C# and SQL Server.</p>
-                </div>
-                <div class="project-card">
-                    <h3>Logo Design Collection</h3>
-                    <p>Set of logos designed for various brands and events using modern design tools.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="service" class="second-section">
-            <h1>My Services</h1>
-            <div class="services-container">
-                <div class="card">
-                    <img src="frontendlogo.png" alt="Frontend Development">
-                    <h2>Web Development</h2>
-                    <p>Building fast, mobile-friendly websites tailored to your business needs using modern web
-                        technologies.</p>
-                    <a href="#">Read More</a>
-                </div>
-
-                <div class="card">
-                    <img src="mobile application.Default" alt="Frontend Development">
-                    <h2>App Development</h2>
-                    <p>Developing efficient Windows applications using C# and .NET, focused on performance and UX.</p>
-                    <a href="#">Read More</a>
-                </div>
-
-                <div class="card">
-                    <img src="logo_designing.png" alt="Frontend Development">
-                    <h2>Logo Design</h2>
-                    <p>Designing creative, brand-aligned logos that make a lasting impression and elevate your brand
-                        identity.</p>
-                    <a href="#">Read More</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="about-section">
-            <div class="container">
-                <div class="left">
-                    <p class="intro">I'm</p>
-                    <h1 class="name">Saad Shaikh</h1>
-                    <p class="description">
-                        A freelancer who provides services for digital programming and design content needs, for all
-                        businesses with more than 10 years of experience
-                    </p>
-                </div>
-                <div class="right">
-                    <div class="half-circle-left-border"></div>
-                    <img src="saad prof_LE_upscale_balanced_x4 (1).png" alt="James Adam"  class="shadow-img"/>
-                    <div class="services">
-                        <h3>Services</h3>
-                        <p>Let's build quality products in programming and design with my services</p>
-                        <a href="#" class="show-more">show more <i class="fas fa-arrow-right"></i></a>
-                        <div class="social-icons">
-                            <i class="fab fa-facebook"></i>
-                            <i class="fab fa-twitter"></i>
-                            <i class="fab fa-instagram"></i>
-                            <i class="fab fa-pinterest"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="partners">
-                <div class="brand"><i class="fab fa-meta"></i> Meta</div>
-                <div class="brand"><i class="fab fa-google"></i> Google</div>
-                <div class="brand"><i class="fab fa-linkedin"></i> LinkedIn</div>
-                <div class="brand"><i class="fab fa-slack"></i> Slack</div>
-            </div>
-
-            <!-- <p>a passionate front-end and application developer
-                            dedicated to building dynamic, user-friendly digital experiences. I specialize in creating
-                            responsive websites using HTML5, CSS3, JavaScript, and frameworks like React or Vue. I also
-                            develop Windows-based applications using C#, leveraging SQL Server for backend integration.
-                        </p>
-                        <p1>
-                            My focus is on blending design with functionality—ensuring clean UI/UX, fast loading speeds,
-                            and robust performance. I'm continuously exploring new technologies and best practices to
-                            elevate my skills and deliver professional-grade solutions.
-                        </p1>
-                        <p2>
-                            In my free time, I enjoy designing logos, exploring UI design trends, and contributing to
-                            open-source projects.
-                        </p2> -->
-
-        </section>
-
-        <section id="contact" class="third-section">
-            <h1>Get in Touch</h1>
-            <div class="contact-card">
-                <p>Want to work together or have a question?</p>
-                <p>Email me at <strong>saad@example.com</strong> or connect via social links below.</p>
-            </div>
-        </section>
+  <!-- Include header -->
+ <header>
+  <div class="header-container">
+    <a href="index.html" class="logo-text">Veloura</a>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="category.html">Categories</a>
+    </nav>
+  </div>
+</header>
 
 
-    </main>
+  <div class="container">
+    <h1>Welcome to Veloura</h1>
+    <p><em>"Elegance Captured in a Bottle"</em></p>
+    <div class="image-grid">
+      <div class="image-card">
+        <img src="images/ingredient1.webp" alt="Perfume Bottle">
+        <div class="overlay">Our Signature Fragrance</div>
+      </div>
+      <div class="image-card">
+        <img src="images/leaves-aroma.jpg" alt="Leaves Aroma">
+        <div class="overlay">Naturally Inspired</div>
+      </div>
+      <div class="image-card">
+        <img src="images/fleur-de-lis.webp" alt="Elegant Fleur">
+        <div class="overlay">Luxurious Experience</div>
+      </div>
+    </div>
+    <p style="margin-top: 30px;">
+      <a href="gallery.html" class="btn">Explore Gallery</a>
+    </p>
+  </div>
 
-    <footer>
-        <div class="footer-links">
-            <a href="#home">Home</a>
-            <a href="#service">Services</a>
-            <a href="#about">About Me</a>
-            <a href="#contact">Contact</a>
-        </div>
-        <p>&copy; 2025 Saad's Portfolio. All rights reserved.</p>
-    </footer>
+  <!-- Include footer -->
+  <footer style="background-color: #2c2c2c; padding: 40px 20px; text-align: center; font-family: 'Segoe UI', sans-serif; color: #f8f1f5;">
+  <div style="max-width: 1000px; margin: 0 auto;">
+    <p style="font-size: 1.2rem; font-weight: bold;">&copy; 2025 Veloura. Elegance in Every Scent.</p>
 
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script>
-        var typed = new Typed('#element', {
-            strings: ['Frontend Developer.', 'C# Windows App Developer.', 'Creative Logo Designer.'],
-            typeSpeed: 50,
-            backSpeed: 25,
-            loop: true
-        });
-    </script>
+    <div style="margin-top: 30px; display: flex; justify-content: space-around; flex-wrap: wrap; gap: 30px;">
+
+      <!-- Contact Info -->
+      <div>
+        <h3>Contact Us</h3>
+        <p>Email: support@veloura.com</p>
+        <p>Phone: +91-9876543210</p>
+        <p>Address: Mumbai, India</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3>Quick Links</h3>
+        <p><a href="#" style="color: #f8f1f5; text-decoration: none;">Home</a></p>
+        <p><a href="#" style="color: #f8f1f5; text-decoration: none;">Shop</a></p>
+        <p><a href="#" style="color: #f8f1f5; text-decoration: none;">About</a></p>
+        <p><a href="#" style="color: #f8f1f5; text-decoration: none;">Contact</a></p>
+      </div>
+
+      <!-- Social Media -->
+      <div>
+        <h3>Follow Us</h3>
+        <p>
+          <a href="#" style="margin: 0 10px; color: #f8f1f5;">Instagram</a> |
+          <a href="#" style="margin: 0 10px; color: #f8f1f5;">Facebook</a> |
+          <a href="#" style="margin: 0 10px; color: #f8f1f5;">Twitter</a>
+        </p>
+      </div>
+
+    </div>
+
+    <hr style="margin: 40px 0; border-color: #ddd;">
+    <p style="font-size: 0.9rem;">Crafted with love by the Veloura Team</p>
+  </div>
+</footer>
+
 </body>
-
 </html>

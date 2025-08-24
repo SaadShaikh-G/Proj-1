@@ -1,0 +1,230 @@
+<!-- <html>
+	<link href="stylesheet1.css" rel="stylesheet">
+    <body>
+        <header>
+            <div class="clock">
+                <p id="date">0000-00-00</p>
+                <p id="time">00:00:00</p>
+            </div>
+
+            <script type="text/javascript">
+                const WEEK = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+
+			function updateTime() {
+                var now = new Date();
+                var hours = now.getHours();
+
+                document.getElementById("time").innerText =
+                    zeroPadding(now.getHours(), 2) + ":" +
+                zeroPadding(now.getMinutes(), 2) + ":" +
+                    zeroPadding(now.getSeconds(), 2);
+
+  
+                hours = hours > 12 ? hours % 12 : hours;
+                
+                
+
+				document.getElementById("date").innerText =
+					now.getFullYear() + "-" +
+					zeroPadding(now.getMonth() + 1, 2) + "-" +
+					zeroPadding(now.getDate(), 2) + " " +
+					WEEK[now.getDay()];
+
+			}
+
+			updateTime();
+			setInterval(updateTime, 1000);
+
+			function zeroPadding(num, digit) {
+				return String(num).padStart(digit, '0');
+			}
+
+            </script> -->
+            
+        <!-- <div class="container">
+            <div class="main-head">
+                <h1>logo</h1>
+                <nav class="nav">
+                    <ul>
+                        <li class="links"><a href="#home">Home</a></li>
+                        <li class="links"><a href="#porjects">Services</a></li>
+                        <li class="links"><a href="#contact">Contacts</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>    
+            <section id="home">
+                <div class="box">
+                    <h1> The Veloura<span><br>Blue Water</span>  </h1>
+                    <button style="padding: 15px 30px 15px 30px;">Buy Now</button> 
+                    <button style="margin-left: 25px;">Shop More</button>
+                    
+                    <ul>
+                        <li>"Unveil the Essence of Elegance"</li>
+                        <li>"Fragrances That Define You"</li>
+                        <li>"Luxury in Every Drop"</li>
+                        <li>"Crafted Scents, Timeless Beauty"</li>
+                        <li>"Where Scent Meets Sophistication"</li>
+                    </ul>
+                   
+                    <img src="perfumebottle1-removebg-preview.png">
+                </div>
+            </section>
+            <section id="porjects">
+                <h1>PROJECTS</h1>
+            </section>
+            <section id="contact">
+                <h1>CONTACT</h1>
+            </section>
+</body>
+</html> --> 
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Veloura | Luxury Perfume</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Georgia', serif;
+      background: linear-gradient(to right, #fceabb, #f8b500);
+      color: #2c2c2c;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .container {
+      background: white;
+      padding: 60px 40px;
+      border-radius: 15px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      max-width: 600px;
+      width: 90%;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      color: #444;
+    }
+
+    .btn {
+      padding: 14px 30px;
+      background: #2c2c2c;
+      color: white;
+      border: none;
+      font-size: 16px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #444;
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .tagline {
+      font-style: italic;
+      margin-bottom: 10px;
+      color: #6b4c1e;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Veloura</h1>
+    <p class="tagline">"Elegance Captured in a Bottle"</p>
+    <p>Discover the art of scent with Veloura. Crafted for those who embrace luxury and timeless beauty.</p>
+    <button class="btn">Explore Collection</button>
+  </div>
+
+</body>
+</html> -->
+
+
+<!-- header.html -->
+
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Veloura – Home</title>
+  <link rel="stylesheet" href="stylesheet1.css">
+</head>
+<body>
+  <!-- Include header -->
+ <header>
+  <div class="header-container">
+    <a href="index.html" class="logo-text">Veloura</a>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+    </nav>
+  </div>
+</header>
+
+
+  <div class="container">
+    <h1>Welcome to Veloura</h1>
+    <p><em>"Elegance Captured in a Bottle"</em></p>
+    <div class="image-grid">
+      <div class="image-card">
+        <img src="images/perfume-bottle.jpeg" alt="Perfume Bottle">
+        <div class="overlay">Our Signature Fragrance</div>
+      </div>
+      <div class="image-card">
+        <img src="images/leaves-aroma.jpg" alt="Leaves Aroma">
+        <div class="overlay">Naturally Inspired</div>
+      </div>
+      <div class="image-card">
+        <img src="images/fleur-de-lis.webp" alt="Elegant Fleur">
+        <div class="overlay">Luxurious Experience</div>
+      </div>
+    </div>
+    <p style="margin-top: 30px;">
+      <a href="gallery.html" class="btn">Explore Gallery</a>
+    </p>
+  </div>
+
+  <!-- Include footer -->
+  <footer>
+    <p>&copy; 2025 Veloura. Elegance in Every Scent.</p>
+  </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
